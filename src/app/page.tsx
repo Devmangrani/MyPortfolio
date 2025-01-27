@@ -8,6 +8,9 @@ import { Badge } from "@/components/ui/badge";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Markdown from "react-markdown";
+import { BlogCard } from "@/components/blog-card";
+import { ContactForm } from "@/components/contact-form";
+import { Icons } from "@/components/icons";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -111,6 +114,18 @@ export default function Page() {
           ))}
         </div>
       </section>
+      <BlurFade delay={BLUR_FADE_DELAY * 10}>
+        <div className="flex justify-center py-8">
+          <Link
+            href={DATA.resumeUrl}
+            target="_blank"
+            className="group inline-flex items-center justify-center gap-2 rounded-lg border bg-card px-8 py-3 text-card-foreground shadow transition-all duration-300 hover:scale-105 hover:shadow-lg"
+          >
+            <Icons.googleDrive className="size-5 transition-transform group-hover:scale-110" />
+            <span className="text-base font-medium">View My Resume</span>
+          </Link>
+        </div>
+      </BlurFade>
       <section id="projects">
         <div className="space-y-12 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 11}>
@@ -152,70 +167,87 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <section id="hackathons">
+      <section id="blogs">
         <div className="space-y-12 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 13}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-                  Hackathons
+                  Blogs & Notes
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  I like building things
+                  My Writings & Study Notes
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  During my time in university, I attended{" "}
-                  {DATA.hackathons.length}+ hackathons. People from around the
-                  colleges would come together and build incredible things in
-                  2-3 days. It was eye-opening to see the endless possibilities
-                  brought to life by a group of motivated and passionate
-                  individuals.
+                  I share my knowledge through blog posts and maintain detailed notes on various technologies.
+                  Here's a collection of my writings and study materials.
                 </p>
               </div>
             </div>
           </BlurFade>
-          <BlurFade delay={BLUR_FADE_DELAY * 14}>
-            <ul className="mb-4 ml-4 divide-y divide-dashed border-l">
-              {DATA.hackathons.map((project, id) => (
-                <BlurFade
-                  key={project.title + project.dates}
-                  delay={BLUR_FADE_DELAY * 15 + id * 0.05}
-                >
-                  <HackathonCard
-                    title={project.title}
-                    description={project.description}
-                    location={project.location}
-                    dates={project.dates}
-                    image={project.image}
-                    links={project.links}
-                  />
-                </BlurFade>
-              ))}
-            </ul>
-          </BlurFade>
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-[1200px] mx-auto">
+            {DATA.blogs.map((blog, id) => (
+              <BlurFade
+                key={blog.title}
+                delay={BLUR_FADE_DELAY * 14 + id * 0.05}
+              >
+                <BlogCard
+                  title={blog.title}
+                  href={blog.href}
+                  description={blog.description}
+                  image={blog.image}
+                  type={blog.type}
+                />
+              </BlurFade>
+            ))}
+          </div>
         </div>
       </section>
       <section id="contact">
-        <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full py-12">
+        <div className="space-y-12 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 16}>
-            <div className="space-y-3">
-              <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-                Contact
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+                  {DATA.contactSection.title}
+                </div>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                  {DATA.contactSection.subtitle}
+                </h2>
+                <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  {DATA.contactSection.description}
+                </p>
               </div>
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                Get in Touch
-              </h2>
-              <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Want to chat? Just shoot me a dm{" "}
+            </div>
+          </BlurFade>
+
+          <BlurFade delay={BLUR_FADE_DELAY * 17}>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 max-w-3xl mx-auto">
+              {DATA.contactSection.socialLinks.map((link, idx) => (
                 <Link
-                  href={DATA.contact.social.X.url}
-                  className="text-blue-500 hover:underline"
+                  key={link.name}
+                  href={link.href}
+                  target="_blank"
+                  className="flex flex-col items-center justify-center p-6 rounded-lg border bg-card text-card-foreground transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
                 >
-                  with a direct question on twitter
-                </Link>{" "}
-                and I&apos;ll respond whenever I can. I will ignore all
-                soliciting.
-              </p>
+                  <link.icon className="size-8 mb-3" />
+                  <span className="text-sm font-medium">{link.name}</span>
+                </Link>
+              ))}
+            </div>
+          </BlurFade>
+
+          <BlurFade delay={BLUR_FADE_DELAY * 18}>
+            <div className="max-w-3xl mx-auto space-y-4">
+              <div className="text-center space-y-2">
+                <h3 className="text-2xl font-bold">
+                  {DATA.contactSection.emailSection.title}
+                </h3>
+                <p className="text-muted-foreground">
+                  {DATA.contactSection.emailSection.subtitle}
+                </p>
+              </div>
+              <ContactForm endpoint={DATA.contactSection.formEndpoint} />
             </div>
           </BlurFade>
         </div>

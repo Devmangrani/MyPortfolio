@@ -46,7 +46,37 @@ export const metadata: Metadata = {
     google: "",
     yandex: "",
   },
+  icons: [
+    {
+      rel: 'apple-touch-icon',
+      sizes: '180x180',
+      url: '/layout/favicon/apple-touch-icon.png',
+    },
+    {
+      rel: 'icon',
+      type: 'image/png',
+      sizes: '32x32',
+      url: '/layout/favicon/favicon-32x32.png',
+    },
+    {
+      rel: 'icon',
+      type: 'image/png',
+      sizes: '16x16',
+      url: '/layout/favicon/favicon-16x16.png',
+    },
+    {
+      rel: 'mask-icon',
+      color: '#5bbad5',
+      url: '/layout/favicon/safari-pinned-tab.svg',
+    },
+    {
+      rel: 'shortcut icon',
+      url: '/layout/favicon/favicon.ico',
+    },
+  ],
+  manifest: '/layout/favicon/site.webmanifest',
 };
+
 export default function RootLayout({
   children,
 }: Readonly<{
