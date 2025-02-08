@@ -182,7 +182,7 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "/jobsewa.png",
+      image: "/Jobsewa.png",
       video: "",
     },
     {
