@@ -11,7 +11,7 @@ export const DATA = {
     "Tech Enthusiast turned Software Engineer. I love building things and helping people. Very active on LinkedIn.",
   summary:
     "I'm a passionate [final year undergrad](#education) with a deep love for coding and technology. My journey has led me to develop a strong foundation in [Web development, Artificial intelligence, and Problem Solving](#education). I thrive on building innovative [products](#projects) and sharing my knowledge by making notes about different languages and technologies on Notion. Always eager to expand my skills and tackle new challenges, I'm actively seeking lucrative opportunities to leverage my tech expertise and drive impactful projects. Whether it's through creating seamless web experiences or exploring the future of decentralized applications, I'm excited to contribute to the tech landscape and grow alongside it.",
-  resumeUrl: "https://drive.google.com/file/d/17QletYLTdOndJwWFlJsw9BcSDTGsLFUG/view?usp=sharing",
+  resumeUrl: "https://drive.google.com/file/d/1SY_aGy70X7UBkAs9Od8zRImnzu676sAs/view?usp=sharing",
   avatarUrl: "/dev.jpeg",
   skills: [
     // Programming Languages
