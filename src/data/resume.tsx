@@ -24,7 +24,11 @@ export const DATA = {
     "CSS",
     
     // Front-end
+    "Vue.js",
+    "Vuex",
+    "Nuxt.js",
     "React.js",
+    "Redux",
     "Next.js",
     "Tailwind CSS",
     "Swing",
@@ -39,17 +43,17 @@ export const DATA = {
     "JDBC",
     
     // Cloud Services
-    // "GCP",
-    // "Vercel",
-    // "Netlify",
+    "GCP",
+    "Vercel",
+    "Netlify",
     
     // Tools & Technologies
     "Git",
     "GitHub",
     "REST APIs",
     "OpenCV",
-    // "CVZone",
-    // "PyNput",
+    "CVZone",
+    "PyNput",
     "OpenAPI",
     
     // CS Fundamentals
@@ -237,6 +241,36 @@ export const DATA = {
         },
       ],
       image: "/aikeyboard.png",
+      video: "",
+    },
+    {
+      title: "Recipe Book",
+      href: "https://recipesbooks.vercel.app/",
+      dates: "February 2025",
+      active: true,
+      description:
+        "**Recipe Explorer** is a modern recipe discovery app built with Vue 3 and TheMealDB API, offering smart search, ingredient-based exploration, and alphabetical browsing. It features a responsive design, fast performance with caching optimizations, and a clean UI. The tech stack includes Vue 3, Vuex, Vue Router, Axios, Tailwind CSS, and Vite. Key optimizations include real-time search with debouncing, API caching, lazy loading, and error handling. The project is open-source under the MIT license, welcoming contributions.",
+      technologies: [
+        "Vue.js",
+        "Vuex",
+        "Vue Router",
+        "Axios",
+        "Tailwind CSS",
+        "Vite",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://recipesbooks.vercel.app/",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/Devmangrani/Recipe-Book",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/recipe.png",
       video: "",
     },
     {
