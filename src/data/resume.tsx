@@ -11,7 +11,7 @@ export const DATA = {
     "Tech Enthusiast turned Software Engineer. I love building things and helping people. Very active on LinkedIn.",
   summary:
     "I'm a passionate [final year undergrad](#education) with a deep love for coding and technology. My journey has led me to develop a strong foundation in [Web development, Artificial intelligence, and Problem Solving](#education). I thrive on building innovative [products](#projects) and sharing my knowledge by making notes about different languages and technologies on Notion. Always eager to expand my skills and tackle new challenges, I'm actively seeking lucrative opportunities to leverage my tech expertise and drive impactful projects. Whether it's through creating seamless web experiences or exploring the future of decentralized applications, I'm excited to contribute to the tech landscape and grow alongside it.",
-  resumeUrl: "https://drive.google.com/file/d/1SY_aGy70X7UBkAs9Od8zRImnzu676sAs/view?usp=sharing",
+  resumeUrl: "https://drive.google.com/file/d/10VnhDCRBVncnsbx470Zo2e8SkUgo93u2/view?usp=sharing",
   avatarUrl: "/dev.jpeg",
   skills: [
     // Programming Languages
@@ -117,6 +117,18 @@ export const DATA = {
 
   work: [
     {
+      company: "Rodella Aerospace Labs",
+      // badges: ["Internship"],
+      href: "",
+      location: "Remote",
+      title: "Software Developer",
+      logoUrl: "/logo.webp",
+      start: "2025",
+      end: "Present",
+      description:
+        "Worked as a Software Developer Intern, contributing to aerospace software solutions. Developed and optimized code for mission-critical applications, collaborated with cross-functional teams, and gained hands-on experience in the aerospace domain.",
+    },
+    {
       company: "Freelance Web Developer",
       href: "",
       badges: [],
@@ -126,7 +138,7 @@ export const DATA = {
       start: "2024",
       end: "Present",
       description:
-        "Developed multiple market-ready, full-stack applications using the MERN stack (MongoDB, Express.js, React, Node.js). Key projects include JobSewa with real-time analytics, and an AI-powered Movie Recommendation app leveraging OpenAI's API. Additionally, created an AI Virtual Keyboard using OpenCV and Python, enabling control through hand gestures. Used OpenCV for image processing, video capture, and real-time feed display, integrated CVZone for precise hand detection and gesture tracking, and simulated keystrokes with PyNput for typing in external applications. Integrated real-time updates with React.js, user authentication, and responsive UI designs using Tailwind CSS. Focused on building scalable, maintainable applications and adhering to industry best practices to deliver high-quality, market-ready products.",
+        "Worked on and developed multiple market-ready, full-stack applications using the MERN stack (MongoDB, Express.js, React, Node.js). Focused on building scalable, maintainable applications while following industry best practices to deliver high-quality results. I have also taken on freelance projects from clients in Israel, the USA, and the UK. I am open to new freelance opportunities and would be glad to collaborate with you on your next project.",
     },
     {
       company: "Open Source",
