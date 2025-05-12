@@ -118,7 +118,7 @@ export const DATA = {
   work: [
     {
       company: "Rodella Aerospace Labs",
-      // badges: ["Internship"],
+      badges: [],
       href: "",
       location: "Remote",
       title: "Software Developer",
